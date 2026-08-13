@@ -1,0 +1,25 @@
+{
+  "name": "testqa-playwright-framework",
+  "version": "1.0.0",
+  "description": "Simple Playwright test automation with Page Object Model",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:login": "playwright test tests/login.spec.ts",
+    "test:checkout": "playwright test tests/checkout.spec.ts",
+    "test:screenshots": "node scripts/run-with-screenshots.mjs",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.0",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.7.3"
+  }
+}
