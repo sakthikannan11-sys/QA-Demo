@@ -13,7 +13,6 @@ test.describe('Login', () => {
   test('admin user can sign in', async ({ page, loginPage }) => {
     await loginPage.open();
     await loginPage.login(TEST_USERS.admin.username, TEST_USERS.admin.password);
-
     await expect(page).not.toHaveURL(/login/);
     console.log('page', page);
   });
